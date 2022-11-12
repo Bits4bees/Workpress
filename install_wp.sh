@@ -75,8 +75,11 @@ do
 done
 
 ##############################
-MYSQL_DATABASE = wordpress_db
-MYSQL_USER = wordpress_user
+#MYSQL_DATABASE = "wordpress_db"
+MYSQL_DATABASE=${MYSQL_DATABASE:-wordpress_db}
+#TZ=${TZ:-UTC}
+#MYSQL_USER = "wordpress_user"
+MYSQL_USER=${MYSQL_USER:-wordpress_user}
 ##############################
 
 msg="
