@@ -1,5 +1,13 @@
 version: '3.8'
 
+volumes:
+  themes:
+    name: themes
+  plugins:
+    name: plugins
+  uploads:
+    name: uploads
+
 services:
   db:
     image: mysql:8.0
@@ -19,9 +27,9 @@ services:
       - db
     image: wordpress:6
     volumes:
-      - ./src/themes:/var/www/html/wp-content/themes
-      - ./src/plugins:/var/www/html/wp-content/plugins
-      - ./src/uploads:/var/www/html/wp-content/uploads
+      - themes:/var/www/html/wp-content/themes
+      - plugins:/var/www/html/wp-content/plugins
+      - uploads:/var/www/html/wp-content/uploads
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     ports:
       - "80:80"
