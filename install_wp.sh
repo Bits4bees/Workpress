@@ -118,7 +118,7 @@ sudo usermod -a -G docker ec2-user
 
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-sudo git clone https://github.com/Bits4bees/B4B-Server.git
+sudo git clone https://github.com/Bits4bees/Workpress.git
 
 cd /home/ec2-user/Workpress
 
